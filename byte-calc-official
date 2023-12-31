@@ -1,0 +1,75 @@
+#Alans Cordova
+kilo_byte = 1024
+mega_byte = kilo_byte * 1024
+giga_byte = mega_byte * 1024
+tera_byte = giga_byte * 1024
+peta_byte = tera_byte * 1024
+exa_byte = peta_byte * 1024
+#every new byte is multiplied by 1024
+print(
+  "     |Welcome to the Byte Calculator|\n \nPleasse type what type of byte you would like to convert\ninto regular bytes. From kilo bytes to exa bytes.\n"
+)
+#Asks for the intpu
+ask = input("Choose your byte: ").lower()
+# i starts the while loop
+#i = 1
+while 1:
+  #checks for the amount of bytes in kilobytes
+  if ask == "kilobyte" or ask == "kilo":
+    ask = kilo_byte
+    askInt = int(input("how many of these byte would you like to calculate: "))
+    total = ask * askInt
+    print("\n|Your total Bytes: ", total, "|")
+    break
+
+  #checks for the amount of bytes in megabytes
+  elif ask == "megabyte" or ask == "mega":
+    ask = mega_byte
+    askInt = int(input("how many of these byte would you like to calculate: "))
+    total = ask * askInt
+    print("\n|Your total Bytes: ", total, "|")
+    break
+
+    #checks for the amount of bytes in gigabyes
+  elif ask == "gigabyte" or ask == "giga":
+    ask = giga_byte
+    askInt = int(input("how many of these byte would you like to calculate: "))
+    total = ask * askInt
+    print("\n|Your total Bytes: ", total, "|")
+    break
+
+    #checks for the amount of bytes in terabytes
+  elif ask == "terabyte" or ask == "tera":
+    ask = tera_byte
+    askInt = int(input("how many of these byte would you like to calculate: "))
+    total = ask * askInt
+    print("\n|Your total Bytes: ", total, "|")
+    break
+
+    #checks for the amount of bytes in petabytes
+  elif ask == "petabyte" or ask == "peta":
+    ask = peta_byte
+    askInt = int(input("how many of these byte would you like to calculate: "))
+    total = ask * askInt
+    print("\n|Your total Bytes: ", total, "|")
+    break
+
+    #checks for the amount of bytes in exabytes
+  elif ask == "exabyte" or ask == "exa":
+    ask = exa_byte
+    askInt = int(input("how many of these byte would you like to calculate: "))
+    total = ask * askInt
+    print("\n|Your total Bytes: ", total, "|")
+    break
+
+    #Backup option incase user picks anything other than the bytes
+  else:
+    print(
+      "\nNot a valid option, please try chosing from a byte below:\nkilobyte \nmegabyte \ngigabyte \nterabyte \npetabyte \nexabyte"
+    )
+    reTry = input("\nwould you like to try again? yes/no ").lower()
+    if reTry == "yes":
+      ask = input("Choose your byte: ").lower()
+    else:
+      print("Understandable, have a nice day.")
+      break
